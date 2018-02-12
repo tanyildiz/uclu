@@ -1,0 +1,13 @@
+<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+	<div>
+	<ul>
+		<% @tags.each do |t| %>
+		
+			<li><%= t.name %></li> <%= link_to 'Delete', t, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br />
+		<% end %>
+
+	</ul>
+	</div>
+		<%= link_to 'New', new_tag_path, class: 'btn btn-primary' %>
+
+</div>

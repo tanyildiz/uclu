@@ -1,0 +1,13 @@
+<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<%= image_tag @product.image %>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<h2><%= @product.name %></h2>
+			<p><%= @product.description %></p>
+			<h4><%= @product.price %></h4>
+			<button class="btn btn-success"><%= link_to 'OK', root_path %></button>
+		</div>
+	</div>
+</div>

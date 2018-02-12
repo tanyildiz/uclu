@@ -1,0 +1,29 @@
+<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+
+	<%= form_for @product do |p| %>
+		
+		<%= p.label :name %><br />
+		<%= p.text_field :name, class:'form-control'%>
+
+		<%= p.label :description %><br />
+		<%= p.text_field :description, class:'form-control' %>
+
+		<%= p.label :image %><br />
+		<%= p.text_field :image, class:'form-control' %>
+
+		<%= p.label :price %><br />
+		<%= p.text_field :price, class:'form-control' %>
+
+		<%= p.label :tag %><br />
+		<%= p.collection_select :tag_id, Tag.all, :id, :name, prompt: true %><br />
+
+		<div class="form-group">
+		<%= p.label :category, for:'exampleFormControlSelect1' %><br />
+		<%= p.collection_select :category_id, Category.all, :id, :name, prompt: true, class:'form-control', id:'exampleFormControlSelect1' %><br />
+		</div>
+
+		<%= p.submit 'UPDATE', class: 'btn btn-primary' %>
+
+	<% end %>
+
+</div>

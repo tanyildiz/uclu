@@ -1,0 +1,12 @@
+<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+
+	<%= form_for @tag do |t| %>
+		
+		<%= t.label :name %><br />
+		<%= t.text_field :name, class:'form-control'%>
+
+		<%= t.submit 'OK', class: 'btn btn-primary' %>
+
+	<% end %>
+
+</div>

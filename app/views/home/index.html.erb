@@ -1,0 +1,26 @@
+<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+	<div class="row">
+	<% @products.each do |product| %>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="product-showcase">
+				<a href="<%= product_path(product) %>">
+					<div id="link-box">
+						<div class="image-box">
+							<%= image_tag(product.image) %>
+						</div>
+						<div>
+							<h4><%= product.name %></h4>
+							<p><small><%= product.description %></small></p>
+							<h3 id="price"><%= product.price %></h3>
+						</div>
+					</div>
+				</a>
+				<div class="price-box">
+					<button class="btn btn-primary"><%=link_to 'Buy', product_path(product) %></button>
+				</div>
+			</div>
+			
+		</div>
+	<% end %>
+	</div>
+</div>
