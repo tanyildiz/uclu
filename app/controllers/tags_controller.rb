@@ -26,6 +26,7 @@ class TagsController < ApplicationController
   end
 
   def show
+    @content="Tags for Products"
     @tags = Tag.all
     @products = Product.all
     @tag = Tag.find(params[:id])
@@ -33,6 +34,7 @@ class TagsController < ApplicationController
   end
 
   def index
+    @content="Tags"
     @content = "Tags"
     @tags = Tag.all
   end

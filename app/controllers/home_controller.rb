@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @products = Product.all
   	@page_title = "Contact"
   	render 'contact'
   end

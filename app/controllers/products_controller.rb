@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @products = Product.all
     @content = "Edit Work"
     @product = Product.find(params[:id])
   end
@@ -18,8 +19,10 @@ class ProductsController < ApplicationController
   end
 
   def update
+    @products = Product.all
     @product = Product.find(params[:id])
     @product.update_attributes(product_params)
+    redirect_to products_path
   end
 
   def destroy
@@ -28,6 +31,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @products = Product.all
     @product = Product.find(params[:id])
     @content = @product.name
     @categories = Category.all

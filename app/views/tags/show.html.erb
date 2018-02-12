@@ -1,6 +1,11 @@
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 	<% @tagEach.each do |tag| %>
-		<%= link_to tag.name, tag %><br />
+		<h3><%= link_to tag.name, tag %></h3><br />
+		<%= image_tag(tag.image) %><br />
+		<%= tag.description%><br />
+		<%= tag.price %><br />
+		<hr>
+
 	<% end %>
 
 	<%= link_to 'Back', products_path, class:'btn btn-primary' %>

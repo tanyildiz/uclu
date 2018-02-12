@@ -34,6 +34,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @content = "Products to Categories"
     @categories = Category.all
     @category = Category.find(params[:id])
     @title = @category.name
