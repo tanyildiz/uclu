@@ -26,4 +26,9 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: production
+  username: deploy
+  password: 97017412
+  encoding: unicode
+  pool: 5
