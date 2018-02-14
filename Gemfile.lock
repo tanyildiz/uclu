@@ -145,9 +145,6 @@ GEM
       ffi (>= 0.5.0, < 2)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    rvm1-capistrano3 (1.4.0)
-      capistrano (~> 3.0)
-      sshkit (>= 1.2)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -203,9 +200,10 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano (~> 3.7, >= 3.7.1)
-  capistrano-passenger (~> 0.2.0)
-  capistrano-rails (~> 1.2)
+  capistrano
+  capistrano-bundler
+  capistrano-passenger (>= 0.1.1)
+  capistrano-rails
   capistrano-rvm
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -214,7 +212,6 @@ DEPENDENCIES
   mysql2
   puma (~> 3.7)
   rails (~> 5.1.4)
-  rvm1-capistrano3
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
