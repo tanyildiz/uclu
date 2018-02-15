@@ -5,8 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
+<<<<<<< HEAD
   #adapter: mysql2
   adapter: postgresql
+=======
+  adapter: postgresql
+  #adapter: psql
+>>>>>>> c0de8721cc97d9171758031ecc36cd2f072ddf1a
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -27,4 +32,13 @@ test:
 
 production:
   <<: *default
+<<<<<<< HEAD
   database: shoppar_production
+=======
+  adapter: mysql2
+  database: production
+  username: deploy
+  password: 97017412
+  encoding: unicode
+  pool: 5
+>>>>>>> c0de8721cc97d9171758031ecc36cd2f072ddf1a
