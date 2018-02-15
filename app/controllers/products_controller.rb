@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
     @product = Product.new
     @category = Category.all
     @tag = Tag.all
+    @products = Product.all
   end
 
   def update

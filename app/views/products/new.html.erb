@@ -3,7 +3,7 @@
 	<%= form_for @product do |p| %>
 		
 		<%= p.label :name %><br />
-		<%= p.text_field :name, class:'form-control'%>
+		<%= p.text_field :name, class:'form-control', :autofocus => true %>
 
 		<%= p.label :description %><br />
 		<%= p.text_field :description, class:'form-control' %>

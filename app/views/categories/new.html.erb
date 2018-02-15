@@ -3,7 +3,7 @@
 	<%= form_for @category do |c| %>
 		
 		<%= c.label :name %><br />
-		<%= c.text_field :name, class:'form-control'%>
+		<%= c.text_field :name, class:'form-control', :autofocus => true%>
 
 		<%= c.submit 'OK', class: 'btn btn-primary' %>
 

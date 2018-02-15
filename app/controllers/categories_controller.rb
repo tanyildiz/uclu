@@ -1,34 +1,40 @@
 class CategoriesController < ApplicationController
   def create
+    @products = Product.all
     @category = Category.new(category_params)
     @category.save
     redirect_to categories_path
   end
 
   def new
+    @products = Product.all
     @content = "New Category"
     @category = Category.new
   end
 
   def edit
+    @products = Product.all
     @content = "Edit Category"
     @category = Category.find(params[:id])
     redirect_to categories_path
   end
 
   def update
+    @products = Product.all
     @category = Category.find(params[:id])
     @category = Category.update_attributes(category_params)
     redirect_to categories_path
   end
 
   def destroy
+    @products = Product.all
     @category = Category.find(params[:id])
     @category.destroy
     redirect_to categories_path
   end
 
   def index
+    @products = Product.all
     @content = "Categories"
     @categories = Category.all
   end
@@ -38,7 +44,8 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @category = Category.find(params[:id])
     @title = @category.name
-    @products = @category.products
+    @productCategory = @category.products
+    @products = Product.all
   end
 
   private
